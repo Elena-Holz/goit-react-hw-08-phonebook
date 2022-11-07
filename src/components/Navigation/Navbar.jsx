@@ -1,9 +1,13 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import { getIsLogin } from "redux/auth/auth-selectors";
 import { useSelector } from "react-redux";
 import { UserNav } from "components/Navigation/UserNav/UserNav.jsx"
 import { AuthNav } from "components/Navigation/AuthNav/AuthNav.jsx"
 import css from "components/Navigation/Navbar.module.css";
+
+const getClassActive = ({ isActive }) => {
+    return isActive ? `${css.link} ${css.active}` : `${css.link}`;
+}
 
 const Navbar = () => {
     const isLogin = useSelector(getIsLogin);
@@ -12,7 +16,7 @@ const Navbar = () => {
         <nav className={css.navbar}>
             <div className="container">
                 <div className={css.row}>
-                    <Link to="/">Main</Link>
+                    <NavLink className={getClassActive} to="/">Main</ NavLink>
                     {isLogin ? <UserNav /> : <AuthNav />}
                 </div>
             </div>

@@ -7,3 +7,20 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.link {
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 20px;
+    color: rgb(20, 20, 20);
+    font-size: 30px;
+    background-color: #fff;
+    margin-right: 80px;
+    border-bottom: 4px solid rgb(179, 177, 177);
+}
+
+.active {
+    /* background-color: red; */
+    color: rgb(141, 13, 13);
+    font-weight: bold;
+}
