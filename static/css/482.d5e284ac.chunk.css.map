@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/482.d5e284ac.chunk.css","mappings":"AAAA,yBAII,aAAsB,CADtB,cAAe,CAGf,eAAiB,CAJjB,cAAe,CAGf,iBAEJ","sources":["pages/Mane/ManePage.module.css"],"sourcesContent":[".navmenu {\n\n    padding: 15px 0;\n    font-size: 30px;\n    color: rgb(28, 28, 28);\n    text-align: center;\n    font-weight: bold;\n}\n\n"],"names":[],"sourceRoot":""}
