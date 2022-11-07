@@ -1,19 +1,28 @@
-import React from "react";
+
+import LoginForm from 'components/LoginForm/LoginForm.jsx';
+import { useDispatch } from "react-redux";
+// import { Navigate } from "react-router-dom";
+// import { getIsLogin } from "redux/auth/auth-selectors";
+import { login } from "redux/auth/auth-operations";
 
 
 export default function LoginPage() {
+    const dispatch = useDispatch();
+    // const isUserLogin = useSelector(getIsLogin);
+    // console.log(isUserLogin);
+
+     const onLogin = (data) => {
+    dispatch(login(data));
+  }
+
+//   if (isUserLogin) {
+//     return <Navigate to="/contacts" />
+//   }
+    
     return (
         <div>
-                <h1>Login page</h1>
-                <form >
-                    <label >User email</label>
-                    <input type="text"  placeholder="Enter user email"/>
-                </form>
-                <form >
-                    <label >User password</label>
-                    <input type="text"  placeholder="Enter user password"/>
-                </form>
-                <button>Login</button>
+            <h1>Login page</h1>
+            <LoginForm onSubmit={onLogin}/>
         </div>
     )
 }

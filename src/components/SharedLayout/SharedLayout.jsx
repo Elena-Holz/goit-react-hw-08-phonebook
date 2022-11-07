@@ -1,4 +1,4 @@
-import Navbar from "components/Navbar/Navbar";
+import Navbar from "components/Navigation/Navbar.jsx";
 import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
 

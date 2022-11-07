@@ -1,26 +1,29 @@
-import React from "react";
-// import RegisterForm from "./RegisterForm/RegisterForm.js";
 
+import { signup } from "redux/auth/auth-operations";
+import RegisterForm from "components/RegisterForm/RegisterForm.jsx";
+import { useDispatch } from "react-redux";
+// import { isLogin } from "redux/auth/auth-selectors";
+// import { useDispatch, useSelector } from "react-redux";
+// import { Navigate } from "react-router-dom";
 
-function RegisterPage() {
+export default function RegisterPage() {
+    const dispatch = useDispatch();
+    // const isUserLogin = useSelector(isLogin);
+    // console.log(isUserLogin);
+    
+    const onRegister = (data) => {
+        dispatch(signup(data));
+    }
+
+    // if (isUserLogin) {
+    //     return <Navigate to="/contacts"  />
+    // }
+
     return (
         <div>
             <h1>Register page</h1>
-             <form >
-                <label >User name</label>
-                <input type="text"  placeholder="Enter user name"/>
-            </form>
-            <form >
-                <label >User email</label>
-                <input type="text"  placeholder="Enter user email"/>
-            </form>
-            <form >
-                <label >User password</label>
-                <input type="text"  placeholder="Enter user password"/>
-            </form>
-             <button>Register</button>
+            <RegisterForm onSubmit={onRegister}/>
         </div>
     )
 }
 
-export default RegisterPage;
