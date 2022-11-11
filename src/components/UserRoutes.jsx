@@ -9,7 +9,7 @@ const ManePage = lazy(() => import("pages/Mane/ManePage"));
 const RegisterPage = lazy(() => import("pages/Register/RegisterPage"));
 const LoginPage = lazy(() => import("pages/Login/LoginPage"));
 const UserPage = lazy(() => import("pages/UserPage/UserPage"));
-const NotFoundPage = lazy(() => import("pages/NotFindPage/NotFindPage"));
+// const NotFoundPage = lazy(() => import("pages/NotFindPage/NotFindPage"));
 
 const UserRoutes = () => {
     return (
@@ -23,7 +23,7 @@ const UserRoutes = () => {
                 <Route element={<PrivateRoute />}>
                     <Route path="/contacts" element={<UserPage />} />   
                 </Route>
-                <Route path="*" element={<NotFoundPage />} />
+                <Route path="*" element={<ManePage />} />
             </Route>
         </Routes>
     )
