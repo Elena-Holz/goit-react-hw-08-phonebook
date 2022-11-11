@@ -1,16 +1,6 @@
 import * as api from "servies/api.js";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-// const isCopy = ({name}, contacts) => {
-//     const normalizedTitle = name.toLowerCase();
-  
-
-//     const result = contacts.find(item => {
-//         return (normalizedTitle === item.name.toLowerCase())
-//     });
-//     return Boolean(result);
-// }
-
 export const fetchContacts = createAsyncThunk(
     "contacts/fetchAll",
     async(_, thunkApi) => {

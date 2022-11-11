@@ -1,57 +1,25 @@
 import { useEffect } from "react";
-// import { nanoid } from "nanoid";
-// import ContactsItem from 'components/ContactsItem/ContactsItem.jsx';
-// import FormAddPhone from 'components/FormAddPhone/FormAddPhone.jsx';
-// import Filter from "components/Filter/Filter.jsx";
-// import css from 'components/App.module.css'
-// import PropTypes from "prop-types";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getLoadingUserStatuse } from "redux/auth/auth-selectors";
 import { current } from "redux/auth/auth-operations";
-// import { fetchContacts } from "redux/contacts/contactsOperations.js";
-// import { getState, getFilteredContacts } from "redux/contacts/contactsSelector";
 import UserRoutes from "./UserRoutes";
 
 export function App() {
   
-//   const contacts = useSelector(getFilteredContacts);
-//   const {loading, error} = useSelector(getState);
   const dispatch = useDispatch();
-
+  const isLoadingUser = useSelector(getLoadingUserStatuse);
 
 useEffect(() => {
         dispatch(current())
     }, [dispatch]);
   
 
- return (
-      // <div
-      //   style={{
-      //     // height: '100vh',
-      //     display: 'flex',
-      //     flexDirection: 'column',
-      //     justifyContent: 'center',
-      //     alignItems: 'center',
-      //     fontSize: 40,
-      //     color: '#010101'
-      //   }}
-      // >
-     <UserRoutes  />
-      //   <h2 className={css.title}>Phonebook</h2>
-      //     <FormAddPhone />
-      //         <Filter/>
-      //         <h2 className={css.title}>Contacts</h2>
-      //     {!loading && contacts.length > 0 && <ContactsItem contacts={contacts} />}
-      //     {error && <p>oops, something went wrong</p>}
-      // </div>
+  return (
+    <>
+     {isLoadingUser ? <p>Loading ...</p> :    <UserRoutes  />}
+  
+    </>
     );
-      }
+}
  
-
-// App.propTypes = {
-
-//     contacts: PropTypes.array,
-//     filter: PropTypes.string,
-    
-// }
-
 

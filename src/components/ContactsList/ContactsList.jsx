@@ -37,7 +37,7 @@ useEffect(() => {
         <h2 className={css.title}>Phonebook</h2>
           <FormAddPhone />
               <Filter/>
-              <h2 className={css.title}>Contacts</h2>
+              <h2 className={css.title}>Your contacts</h2>
           {!loading && contacts.length > 0 && <ContactsItem contacts={contacts} />}
           {error && <p>oops, something went wrong</p>}
       </div>
