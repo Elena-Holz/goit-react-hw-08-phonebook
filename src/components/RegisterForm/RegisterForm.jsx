@@ -41,9 +41,7 @@ const RegisterForm = ({onSubmit}) => {
      const handleSubmit = (e) => {
         e.preventDefault();
          onSubmit({ ...state });
-         console.log('state', state);
          setState({ ...initialState });
-         console.log('initialState', initialState);
     };
     
 //  const handleSubmit = (e) => {

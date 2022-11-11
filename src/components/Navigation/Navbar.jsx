@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { getIsLogin } from "redux/auth/auth-selectors";
 import { useSelector } from "react-redux";
-import { UserNav } from "components/Navigation/UserNav/UserNav.jsx"
-import { AuthNav } from "components/Navigation/AuthNav/AuthNav.jsx"
+import UserMenu from "components/UserMenu/UserMenu.jsx";
+import { AuthNav } from "components/Navigation/AuthNav/AuthNav.jsx";
 import css from "components/Navigation/Navbar.module.css";
 
 const getClassActive = ({ isActive }) => {
@@ -17,7 +17,8 @@ const Navbar = () => {
             <div className="container">
                 <div className={css.row}>
                     <NavLink className={getClassActive} to="/">Main</ NavLink>
-                    {isLogin ? <UserNav /> : <AuthNav />}
+                    {isLogin && <NavLink className={getClassActive} to="/contacts">Contacts</NavLink>}
+                    {isLogin ? <UserMenu /> : <AuthNav />}
                 </div>
             </div>
         </nav>

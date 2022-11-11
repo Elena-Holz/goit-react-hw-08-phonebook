@@ -1,11 +1,12 @@
-// import { useEffect } from "react";
+import { useEffect } from "react";
 // import { nanoid } from "nanoid";
 // import ContactsItem from 'components/ContactsItem/ContactsItem.jsx';
 // import FormAddPhone from 'components/FormAddPhone/FormAddPhone.jsx';
 // import Filter from "components/Filter/Filter.jsx";
 // import css from 'components/App.module.css'
 // import PropTypes from "prop-types";
-// import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+import { current } from "redux/auth/auth-operations";
 // import { fetchContacts } from "redux/contacts/contactsOperations.js";
 // import { getState, getFilteredContacts } from "redux/contacts/contactsSelector";
 import UserRoutes from "./UserRoutes";
@@ -14,12 +15,12 @@ export function App() {
   
 //   const contacts = useSelector(getFilteredContacts);
 //   const {loading, error} = useSelector(getState);
-//   const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
 
-// useEffect(() => {
-//         dispatch(fetchContacts())
-//     }, [dispatch]);
+useEffect(() => {
+        dispatch(current())
+    }, [dispatch]);
   
 
  return (

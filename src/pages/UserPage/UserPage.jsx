@@ -1,12 +1,21 @@
 import React from "react";
 import { ContactsList } from "components/ContactsList/ContactsList";
-import UserMenu from "components/UserMenu/UserMenu.jsx";
+import { getIsLogin } from "redux/auth/auth-selectors";
+import { useSelector } from "react-redux";
+import { Navigate } from "react-router-dom";
+
 
 export default function ContactsPage() {
+
+    const isLogin = useSelector(getIsLogin);
+    console.log(getIsLogin);
+
+      if (!isLogin) {
+        return <Navigate to="/login" />
+    } 
+
     return (
         <div>
-            <h1>Contacts page</h1>
-            <UserMenu />
             <ContactsList />
         </div>
     )
