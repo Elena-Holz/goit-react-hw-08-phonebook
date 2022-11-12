@@ -1,6 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-
 import * as api from "servies/auth.js";
 
 
@@ -62,6 +61,11 @@ export const current = createAsyncThunk(
     async (_, { rejectWithValue, getState }) => {
         try {
             const { auth } = getState();
+            // const token = auth.token;
+            // console.log('auth.token', auth.token);
+            // if (!token) {
+            //     return;
+            // }
             const result = await api.getCurrentUser(auth.token);
             console.log("result", result);
             return result;
