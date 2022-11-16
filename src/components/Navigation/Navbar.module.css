@@ -1,5 +1,8 @@
 .navbar {
-    padding: 15px 0;
+    padding: 15px 10px;
+    width: 748px;
+    color:rgb(141, 13, 13);
+    background-color: rgb(7, 176, 192);
 }
 
 .row {
@@ -17,11 +20,13 @@
     font-size: 30px;
     background-color: #fff;
     margin-right: 80px;
-    border-bottom: 4px solid rgb(179, 177, 177);
+
+    /* background-color:rgb(7, 176, 192); */
 }
 
 .active {
     /* background-color: red; */
     color: rgb(141, 13, 13);
     font-weight: bold;
+    background-color: rgb(7, 176, 192);
 }

@@ -1,11 +1,13 @@
 .titleInput {
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     color: rgb(97, 97, 144);
 }
 
 .input {
     width: 250px;
-    height: 25px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: rgb(219, 244, 246);
 
 }

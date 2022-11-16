@@ -17,6 +17,8 @@
     padding: 15px 20px;
     display: inline-block;
     width: 100%;
+    border-radius: 5px;
+    background-color: rgb(219, 244, 246);
 }
 
 .registerbtn {

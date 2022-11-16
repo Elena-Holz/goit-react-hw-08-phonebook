@@ -6,7 +6,9 @@
 
 .input {
     width: 250px;
-    height: 25px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: rgb(219, 244, 246);
 
 }
 
@@ -16,11 +18,12 @@
 }
 
 .button {
-    width: 190px;
+    width: 260px;
     height: 30px;
     font-size: 20px;
     text-align: center;
-    background-color: rgb(186, 223, 242);
+    border-radius: 4px;
+    background-color: rgb(7, 176, 192);
     color: rgb(54, 54, 70);
 }
 
