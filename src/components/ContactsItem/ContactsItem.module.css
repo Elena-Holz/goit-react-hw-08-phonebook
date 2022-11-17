@@ -1,12 +1,15 @@
 .listItem {
     font-size: 25px;
     text-align: center;
-    color: rgb(97, 97, 144);
+    color: rgb(29, 29, 30);
     margin-top: 10px;
+    background-color: rgb(7, 176, 192);
+    
 }
 
 .deleteItem {
     font-size: 15px;
+    height: 26px;
     text-align: center;
     color: rgb(248, 245, 245);
     border: 1px solid;
